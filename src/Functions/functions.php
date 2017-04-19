@@ -11,8 +11,9 @@ return [
 	'easter(year)' => [
 		['year'],
 		function (int $year): DateTimeImmutable {
-			// function has to return Monday midnight
-			return new DateTimeImmutable('@' . (easter_date($year) + (24 * 60 * 60)));
+			$days = easter_days($year);
+			$base = new DateTimeImmutable("$year-03-21");
+			return $base->modify("+{$days} days");
 		},
 	],
 
