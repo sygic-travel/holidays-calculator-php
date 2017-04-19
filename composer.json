@@ -1,4 +1,21 @@
 {
+	"name": "sygic-travel/holidays-reader-php",
+	"type": "library",
+	"description": "Holidays definition parser & reader in PHP.",
+	"keywords": [
+		"holidays",
+		"holiday-calculation"
+	],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Sygic Travel",
+			"homepage": "https://travel.sygic.com/en"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/sygic-travel/holidays-reader-php/issues"
+	},
 	"require": {
 		"php": "~7.1"
 	},
