@@ -48,12 +48,16 @@ class Resolver
 		$date = null;
 		$observedDate = null;
 
-		if ($definition->month) {
+		if ($definition->monthDay) {
 			$date = new DateTimeImmutable("{$year}-{$definition->month}-{$definition->monthDay}");
-		}
 
-		if ($definition->week) {
-			$date = new DateTimeImmutable();
+		} elseif ($definition->week) {
+			static $days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+			static $months = [1 => 'Jan', 'Feb', 'Mar', 'May', 'Apr', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+			static $nth = [1 => 'first', 'second', 'third', 'fourth'];
+
+			$timestamp = strtotime("{$nth[$definition->week]} {$days[$definition->weekDay]} of {$months[$definition->month]} $year");
+			$date = new DateTimeImmutable('@' . $timestamp);
 		}
 
 		if ($definition->functionName) {
