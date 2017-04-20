@@ -37,9 +37,9 @@ class Holiday
 	}
 
 
-	public function getObserverDate(): DateTimeImmutable
+	public function getObserverDate(): ?DateTimeImmutable
 	{
-		return $this->observedDate ?: $this->date;
+		return $this->observedDate;
 	}
 
 
