@@ -1,6 +1,6 @@
 <?php
 
-namespace SygicTravel\HolidaysReader\Model;
+namespace SygicTravel\HolidaysCalculator\Model;
 
 use DateTimeImmutable;
 

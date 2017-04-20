@@ -1,6 +1,6 @@
 <?php
 
-namespace SygicTravel\HolidaysReader\Exceptions;
+namespace SygicTravel\HolidaysCalculator\Exceptions;
 
 
 class InvalidArgumentException extends \InvalidArgumentException

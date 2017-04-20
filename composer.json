@@ -1,7 +1,7 @@
 {
-	"name": "sygic-travel/holidays-reader-php",
+	"name": "sygic-travel/holidays-calculator-php",
 	"type": "library",
-	"description": "Holidays definition parser & reader in PHP.",
+	"description": "Holidays definition parser & calculator in PHP.",
 	"keywords": [
 		"holidays",
 		"holiday-calculation"
@@ -14,7 +14,7 @@
 		}
 	],
 	"support": {
-		"issues": "https://github.com/sygic-travel/holidays-reader-php/issues"
+		"issues": "https://github.com/sygic-travel/holidays-calculator-php/issues"
 	},
 	"require": {
 		"php": "~7.1"
@@ -30,7 +30,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"SygicTravel\\HolidaysReader\\": "./src"
+			"SygicTravel\\HolidaysCalculator\\": "./src"
 		}
 	}
 }

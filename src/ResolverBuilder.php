@@ -1,9 +1,9 @@
 <?php
 
-namespace SygicTravel\HolidaysReader;
+namespace SygicTravel\HolidaysCalculator;
 
-use SygicTravel\HolidaysReader\Loaders\ILoader;
-use SygicTravel\HolidaysReader\Model\HolidayDefinition;
+use SygicTravel\HolidaysCalculator\Loaders\ILoader;
+use SygicTravel\HolidaysCalculator\Model\HolidayDefinition;
 
 
 class ResolverBuilder

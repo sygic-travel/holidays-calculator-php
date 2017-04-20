@@ -1,6 +1,6 @@
 <?php
 
-namespace SygicTravelTests\HolidaysReader;
+namespace SygicTravelTests\HolidaysCalculator;
 
 use Tester\Environment;
 use Tracy\Debugger;

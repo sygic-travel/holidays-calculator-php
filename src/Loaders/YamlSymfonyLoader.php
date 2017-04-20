@@ -1,8 +1,8 @@
 <?php
 
-namespace SygicTravel\HolidaysReader\Loaders;
+namespace SygicTravel\HolidaysCalculator\Loaders;
 
-use SygicTravel\HolidaysReader\Loaders\Utils\YamlParser;
+use SygicTravel\HolidaysCalculator\Loaders\Utils\YamlParser;
 use Symfony\Component\Yaml\Yaml;
 
 

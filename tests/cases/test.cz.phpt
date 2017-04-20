@@ -1,10 +1,10 @@
 <?php
 
-namespace SygicTravelTests\HolidaysReader;
+namespace SygicTravelTests\HolidaysCalculator;
 
-use SygicTravel\HolidaysReader\Loaders\YamlSymfonyLoader;
-use SygicTravel\HolidaysReader\Model\Holiday;
-use SygicTravel\HolidaysReader\ResolverBuilder;
+use SygicTravel\HolidaysCalculator\Loaders\YamlSymfonyLoader;
+use SygicTravel\HolidaysCalculator\Model\Holiday;
+use SygicTravel\HolidaysCalculator\ResolverBuilder;
 use Tester\Assert;
 
 

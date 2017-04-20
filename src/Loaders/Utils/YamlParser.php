@@ -1,8 +1,8 @@
 <?php
 
-namespace SygicTravel\HolidaysReader\Loaders\Utils;
+namespace SygicTravel\HolidaysCalculator\Loaders\Utils;
 
-use SygicTravel\HolidaysReader\Model\HolidayDefinition;
+use SygicTravel\HolidaysCalculator\Model\HolidayDefinition;
 
 
 class YamlParser

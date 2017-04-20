@@ -1,8 +1,8 @@
 <?php
 
-namespace SygicTravel\HolidaysReader\Loaders;
+namespace SygicTravel\HolidaysCalculator\Loaders;
 
-use SygicTravel\HolidaysReader\Model\HolidayDefinition;
+use SygicTravel\HolidaysCalculator\Model\HolidayDefinition;
 
 
 interface ILoader

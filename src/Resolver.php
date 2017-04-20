@@ -1,12 +1,12 @@
 <?php
 
-namespace SygicTravel\HolidaysReader;
+namespace SygicTravel\HolidaysCalculator;
 
 use DateTimeImmutable;
-use SygicTravel\HolidaysReader\Exceptions\InvalidArgumentException;
-use SygicTravel\HolidaysReader\Exceptions\NotSupportedException;
-use SygicTravel\HolidaysReader\Model\Holiday;
-use SygicTravel\HolidaysReader\Model\HolidayDefinition;
+use SygicTravel\HolidaysCalculator\Exceptions\InvalidArgumentException;
+use SygicTravel\HolidaysCalculator\Exceptions\NotSupportedException;
+use SygicTravel\HolidaysCalculator\Model\Holiday;
+use SygicTravel\HolidaysCalculator\Model\HolidayDefinition;
 
 
 class Resolver

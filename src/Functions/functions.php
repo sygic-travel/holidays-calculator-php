@@ -1,9 +1,9 @@
 <?php
 
-namespace SygicTravel\HolidaysReader\Functions;
+namespace SygicTravel\HolidaysCalculator\Functions;
 
 use DateTimeImmutable;
-use SygicTravel\HolidaysReader\Exceptions\NotImplementedException;
+use SygicTravel\HolidaysCalculator\Exceptions\NotImplementedException;
 
 
 return [
