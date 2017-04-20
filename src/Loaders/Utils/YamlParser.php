@@ -29,6 +29,7 @@ class YamlParser
 				$definition->weekDay = $holiday['wday'] ?? null;
 				$definition->functionName = $holiday['function'] ?? null;
 				$definition->functionModifier = $holiday['function_modifier'] ?? null;
+				$definition->observerFunctionName = $holiday['observed'] ?? null;
 
 				$definitions[] = $definition;
 			}

@@ -32,17 +32,21 @@ class Resolver
 	{
 		$holidays = [];
 		foreach ($this->holidayDefinitions as $holidayDefinition) {
-			$holiday = $this->getHolidayDate($holidayDefinition, $year);
-			$holidays[$holiday->format('Y-m-d')] = new Holiday($holidayDefinition, $holiday, null);
+			[$date, $observedDate] = $this->getHolidayDate($holidayDefinition, $year);
+			$holidays[] = new Holiday($holidayDefinition, $date, $observedDate);
 		}
 		ksort($holidays);
 		return $holidays;
 	}
 
 
-	private function getHolidayDate(HolidayDefinition $definition, int $year): DateTimeImmutable
+	/**
+	 * @return DateTimeImmutable[]
+	 */
+	private function getHolidayDate(HolidayDefinition $definition, int $year): array
 	{
 		$date = null;
+		$observedDate = null;
 
 		if ($definition->month) {
 			$date = new DateTimeImmutable("{$year}-{$definition->month}-{$definition->monthDay}");
@@ -64,7 +68,11 @@ class Resolver
 			$date = $date->modify(($definition->functionModifier ? '+' : '') . $definition->functionModifier . ' days');
 		}
 
-		return $date;
+		if ($definition->observerFunctionName) {
+			$observedDate = $this->callFunction($definition->observerFunctionName, $year, $date);
+		}
+
+		return [$date, $observedDate];
 	}
 
 
