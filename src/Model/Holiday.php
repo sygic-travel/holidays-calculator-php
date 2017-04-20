@@ -31,6 +31,12 @@ class Holiday
 	}
 
 
+	public function getRegions(): array
+	{
+		return $this->definition->regions;
+	}
+
+
 	public function getDate(): DateTimeImmutable
 	{
 		return $this->date;
