@@ -35,7 +35,9 @@ class Resolver
 			[$date, $observedDate] = $this->getHolidayDate($holidayDefinition, $year);
 			$holidays[] = new Holiday($holidayDefinition, $date, $observedDate);
 		}
-		ksort($holidays);
+		usort($holidays, function(Holiday $a, Holiday $b) {
+			return $a->getDate()->getTimestamp() <=> $b->getDate()->getTimestamp();
+		});
 		return $holidays;
 	}
 
