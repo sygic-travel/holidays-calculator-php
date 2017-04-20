@@ -17,12 +17,30 @@ if (getenv(Environment::RUNNER) === '1') {
 	putenv('ANSICON=TRUE');
 }
 
-function convertToTestStructure(array $holidays): array
+/**
+ * @param Holiday[] $holidays
+ */
+function convertToTestStructure(array $holidays, bool $byObserved = false): array
 {
-	return array_map(function (Holiday $holiday) {
-		if ($holiday->getObserverDate() !== null) {
-			return [$holiday->getName(), $holiday->getObserverDate()->format('Y-m-d')];
+	$out = [];
+	if ($byObserved) {
+		foreach ($holidays as $holiday) {
+			$key = $holiday->getObserverDate() ?: $holiday->getDate();
+			$key = $key->format('Y-m-d');
+			$out[$key] = $holiday->getName();
 		}
-		return $holiday->getName();
-	}, $holidays);
+	} else {
+		foreach ($holidays as $holiday) {
+			$key = $holiday->getDate()->format('Y-m-d');
+			$out[$key] = $holiday->getName();
+		}
+	}
+	return $out;
+}
+
+function filterForRegion(array $holidays, string $region): array
+{
+	return array_filter($holidays, function (Holiday $holiday) use ($region) {
+		return in_array($region, $holiday->getRegions(), true);
+	});
 }
