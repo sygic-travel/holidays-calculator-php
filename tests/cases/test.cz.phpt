@@ -3,7 +3,6 @@
 namespace SygicTravelTests\HolidaysCalculator;
 
 use SygicTravel\HolidaysCalculator\Loaders\YamlSymfonyLoader;
-use SygicTravel\HolidaysCalculator\Model\Holiday;
 use SygicTravel\HolidaysCalculator\ResolverBuilder;
 use Tester\Assert;
 
@@ -19,9 +18,7 @@ $resolver = $builder
 	->build();
 
 $holidays = $resolver->getHolidays(2017);
-$holidays = array_map(function (Holiday $holiday) {
-	return $holiday->getName();
-}, $holidays);
+$holidays = convertToTestStructure($holidays);
 
 
 $expected = [
